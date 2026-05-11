@@ -3,6 +3,7 @@ from PIL import Image
 from ultralytics import YOLO
 import numpy as np
 from llama_utils import generate_llama_explanation
+from blockchain.blockchain_utils import add_record, get_records_count
 
 st.subheader("Ανέβασε μια εικόνα για ανίχνευση")
 
@@ -57,6 +58,18 @@ if uploaded_file is not None:
         st.subheader("🧠 LLaMA Explanation")
         st.write(explanation)
 
+    if st.button("🔗 Store decision on Blockchain"):
+
+        tx_hash = add_record(
+            uploaded_file.name,
+            crop_count,
+            weed_count,
+            decision,
+            explanation
+        )
+
+        st.success(f"Stored on blockchain ✅")
+        st.code(tx_hash)
 else:
     st.info("Περίμενω να ανεβάσεις μια εικόνα...")
 

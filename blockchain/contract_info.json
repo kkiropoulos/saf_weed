@@ -1,0 +1,95 @@
+{
+    "address": "0xFbDbf2A0216FF8FcB5e1502Ff933C7ED5f2E15fF",
+    "abi": [
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_imageName",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_cropCount",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_weedCount",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_decision",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_explanation",
+                    "type": "string"
+                }
+            ],
+            "name": "addRecord",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getRecordsCount",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "records",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "imageName",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "cropCount",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "weedCount",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "decision",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "explanation",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "timestamp",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ]
+}

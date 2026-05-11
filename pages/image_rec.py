@@ -53,10 +53,10 @@ if uploaded_file is not None:
 
     if st.button("🤖 Generate LLaMA Explanation"):
         with st.spinner("Το LLaMA δημιουργεί επεξήγηση..."):
-            explanation = generate_llama_explanation(crop_count, weed_count, decision)
+            st.session_state["explanation"] = generate_llama_explanation(crop_count, weed_count, decision)
 
         st.subheader("🧠 LLaMA Explanation")
-        st.write(explanation)
+        st.write(st.session_state["explanation"])
 
     if st.button("🔗 Store decision on Blockchain"):
 
@@ -65,7 +65,7 @@ if uploaded_file is not None:
             crop_count,
             weed_count,
             decision,
-            explanation
+            st.session_state["explanation"]
         )
 
         st.success(f"Stored on blockchain ✅")
